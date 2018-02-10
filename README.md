@@ -18,5 +18,5 @@ var public_spreadsheet_url = 'your sharing url';
 Add to js/map.js
 
 ```javascript
-L.mapbox.accessToken = ('your key here')
+L.mapbox.accessToken = 'your key here';
 ```
