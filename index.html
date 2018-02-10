@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tracking</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/mapbox.js/mapbox.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <a class="navbar-brand" href="#">My Website</a>
+  </nav>
+
+  <form class="form-inline text-center" role="form">
+    <div class="form-group row">
+      <div class="col-md-12">
+        <h1>My Website</h1>
+        <input type="text" name="tracking" class="form-control" placeholder="Tracking ID">
+        <input type="text" name="zipcode" class="form-control" placeholder="Zipcode">
+        <!-- <input type="submit" value="button" class="btn btn-primary"> -->
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-send"></i>&nbsp;&nbsp;Go!
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div id='map'></div>
+
+  <!-- js dependencies -->
+  <script src="bower_components/jquery/dist/jquery.min.js "></script>
+  <script src="bower_components/mapbox.js/mapbox.js "></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js "></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script src="js/leaflet.ajax.min.js" type="text/javascript"></script>
+  <script src="js/map.js"> </script>
+
+</body>
+</html>
