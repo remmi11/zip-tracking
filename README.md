@@ -6,9 +6,9 @@ Steps
 
 1) Install bower components [bower](https://bower.io/)
 -------------------------------------------------------
-'''
+```
 bower install
-'''
+```
 
 2) Add sharing url from google sheets
 ---------------------------------------------------------
