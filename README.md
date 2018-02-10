@@ -1,4 +1,6 @@
-# Steps to deploy - [See the Demo](https://zip-tracking.herokuapp.com/)
+# Steps to deploy - 
+
+##[See the Demo](https://zip-tracking.herokuapp.com/)
 
 1) Must first install bower dependencies. Find bower [here](https://bower.io/)
 ```
