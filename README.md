@@ -1,6 +1,6 @@
 # Steps to deploy - 
 
-##[See the Demo](https://zip-tracking.herokuapp.com/)
+## [See the Demo](https://zip-tracking.herokuapp.com/)
 
 1) Must first install bower dependencies. Find bower [here](https://bower.io/)
 ```
@@ -15,7 +15,7 @@ Add to js/map.js
 var public_spreadsheet_url = 'your sharing url';
 ```
 
-3) Acquire a [Mapbox API Key](https://www.mapbox.com/) (50000 free requests/mo)
+3) Acquire a [Mapbox API Key](https://www.mapbox.com/) (50000 free geocode requests/mo)
 
 Add to js/map.js
 
