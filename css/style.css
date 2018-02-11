@@ -25,12 +25,13 @@ body {
     padding-right: 25px;
   }
 
- .form-inline {
+ .form {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin: 10px;
   }
+
 /* 
   @media only screen 
     and (min-device-width : 414px) 

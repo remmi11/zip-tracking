@@ -1,28 +1,9 @@
-// /////////////////////////////////////////////////////////////////////////////////
-// // jquery ui
-
-// $(".dropdown-toggle").dropdown();
-
-// $(".dropdown-menu a").click(function () {
-//     $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-//     $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
-// });
-
-// // Navbar Menu
-// $("#menu-toggle").click(function (e) {
-//     e.preventDefault();
-//     $("#wrapper").toggleClass("toggled");
-// });
-// $(document).ready(function () {
-//     $("#menu-toggle").click();
-// });
-// $("#filter-menu-toggle").click(function (e) {
-//     e.preventDefault();
-//     $("#wrapper").toggleClass("toggled");
-// });
-
 /////////////////////////////////////////////////////////////////////////////////
 // tabletop js
+
+var destination;
+var tracking;
+var zipList;
 
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1e2e7zVw8r-IZPbd9S1hLwSWT2o5x5bT_fStFRR8NWSM/edit?usp=sharing';
 
@@ -34,10 +15,6 @@ function init() {
     })
 }
 
-var destination;
-var tracking;
-var zipList = [];
-
 $('.form-inline').submit(function (e) {
     e.preventDefault();
     tracking = jQuery('input[name="tracking"]').val();
@@ -46,6 +23,7 @@ $('.form-inline').submit(function (e) {
 });
 
 function showInfo(data, tabletop) {
+    zipList = [];
     var regexp = new RegExp(tracking);
     for (var i = 0; i < data.length; i++) {
         if (regexp.test(data[i].tracking)) {
@@ -92,7 +70,7 @@ var baseMaps = {
 L.control.layers(baseMaps).addTo(map);
 
 var markerArray = [];
-var bounds = L.latLngBounds(markerArray);
+var zips = L.layerGroup();
 
 function onEachFeature(feature, layer) {
     layer.bindPopup('<h1>' + feature.place_name + '</h1>');
@@ -118,23 +96,21 @@ function findMe(zipList) {
                             opacity: 1,
                             fillColor: 'yellow',
                             fillOpacity: 1
-                        }).addTo(map);
+                        }).addTo(zips);
                     }
                 })
             })
         })
     }
-    map.fitBounds(bounds);
+    zips.addTo(map);
+    map.fitBounds(zips);
 };
 
-
-// pointToLayer: function (feature, latlng) {
-//     return new L.CircleMarker(latlng, {
-//         radius: 10,
-//         color: '#000',
-//         weight: 5,
-//         opacity: 1,
-//         fillColor: 'yellow',
-//         fillOpacity: 1
-//     }).addTo(map);
-// }
+////////////////////////////////////////////////////////////////////////////////
+// Reset Function
+$( "#reset" ).click(function() {
+    //alert( "Handler for .click() called." );
+    zipList = [];
+    map.removeLayer(zips);
+    zips.clearLayers();
+});
