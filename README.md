@@ -1,6 +1,6 @@
 # Setup
 
-## [See the Demo](https://zip-tracking.herokuapp.com/)
+### [See the Demo](https://zip-tracking.herokuapp.com/)
 
 1. Add sharing url from google sheets
 
