@@ -13,9 +13,12 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/mapbox.js/mapbox.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -23,22 +26,24 @@
     <a class="navbar-brand" href="#">My Website</a>
   </nav>
 
-  <form class="form-inline text-center" role="form">
-    <div class="form-group row">
-      <div class="col-md-12">
-        <h1>My Website</h1>
-        <input type="text" name="tracking" class="form-control" placeholder="Tracking ID">
-        <input type="text" name="zipcode" class="form-control" placeholder="Zipcode">
-        <!-- <input type="submit" value="button" class="btn btn-primary"> -->
-        <button type="submit" class="btn btn-primary">
-          <i class="fa fa-send"></i>&nbsp;&nbsp;Go!
-        </button>
-        <button type="reset" id="reset" value="reset" class="btn btn-danger">
-          <i class="fa fa-ban"></i>
-        </button>
+  <div class="container container-form">
+    <form class="form-inline text-center" role="form">
+      <div class="form-group row">
+        <div class="col-md-12">
+          <h1>Enter Tracking No.</h1>
+          <input type="text" name="tracking" class="form-control" placeholder="Tracking ID">
+          <input type="text" name="zipcode" class="form-control" placeholder="Zipcode">
+          <!-- <input type="submit" value="button" class="btn btn-primary"> -->
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-send"></i>&nbsp;&nbsp;Go!
+          </button>
+          <button type="reset" id="reset" value="reset" class="btn btn-danger">
+            <i class="fa fa-ban"></i>
+          </button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 
   <div id='map'></div>
 
@@ -51,4 +56,5 @@
   <script src="js/map.js"> </script>
 
 </body>
+
 </html>
