@@ -6,6 +6,7 @@
 <img src = "https://github.com/remmi11/zip-tracking/blob/master/img/sharing.png" width="350">
 
    Add to js/map.js
+
 ```javascript
 var public_spreadsheet_url = 'your sharing url';
 ```
