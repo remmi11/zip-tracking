@@ -6,6 +6,10 @@ body
     color: #333;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
+
  @media (min-width: 992px) {
     body {
       padding: 50px;
